@@ -41,13 +41,12 @@ The pipeline runs four modules sequentially, fully on-device:
 ```mermaid
 flowchart LR
     A[User voice input] --> B[Whisper Small — STT]
-    B --> C[Gemma 4 E2B — LLM]
+    B --> C["Gemma-4-E2B-it Q4_K_M — LLM"]
     C --> D[Piper TTS]
     D --> E[Spoken response]
     C --> F[(Clinical dashboard<br/>session history + acoustic metrics)]
 ```
-
-**Why not use Gemma's native audio encoder?** Gemma 4 was initially selected for its built-in acoustic encoder, which in principle allows direct audio-to-audio processing without separate STT/TTS stages. In practice, the LLM alone already consumes roughly 3.5 GB of the 4 GB of VRAM available in the project's compute environment, leaving no headroom to also run native audio processing on-device. The team therefore adopted a more VRAM-efficient three-module pipeline — Whisper Small (STT) and Piper TTS (TTS) as lightweight, separate stages around the LLM — trading some pipeline simplicity for feasibility under hardware constraints.
+**Model:** `gemma-4-e2b-it`, quantized to **Q4_K_M** — chosen specifically to fit the project's compute budget while retaining acceptable instruction-following quality for the emotional-support domain.
 
 **System prompt design** is grounded in four validated psychological frameworks:
 - Person-centered therapy core conditions (Rogers, 1957) → active listening, unconditional acceptance
@@ -101,3 +100,59 @@ As stated in the SIE 2026 paper's own conclusions:
 - Planned next steps: fine-tuning on public-domain clinical-psychological corpora, adding an independent crisis-classification layer, and evaluating the system in real scenarios under the supervision of mental health professionals.
 
 ---
+
+## Authors
+
+| Name | Role | Institution | Email |
+|---|---|---|---|
+| Jose Carlos Arroyo Cantero | Author | Universidad de Sucre | jose.arroyo54@unisucrevirtual.edu.co |
+| Iván Mauricio Gómez Pérez | Author | Universidad de Sucre | imauroo2023@gmail.com |
+| Lucas Mateo Rivadeneira Zarza | Author | Universidad de Sucre | lucas.rivadeneira@unisucrevirtual.edu.co |
+| Enoc David Samur Martínez | Author | Universidad de Sucre | enoc.samur@unisucrevirtual.edu.co |
+| Melba Liliana Vertel Morinson | Advisor | Universidad de Sucre | melba.vertel@unisucre.edu.co |
+
+Research group: **G.I. Estadística y Modelamiento Matemático**, Universidad de Sucre.
+
+---
+
+## Citation
+
+If you reference this work, please cite:
+
+```bibtex
+@inproceedings{arroyo2026virtualassistant,
+  title     = {Asistente Virtual Conversacional para el Acompañamiento Emocional Basado en Inteligencia Artificial},
+  author    = {Arroyo Cantero, Jose Carlos and Gómez Pérez, Iván Mauricio and Rivadeneira Zarza, Lucas Mateo and Samur Martínez, Enoc David and Vertel Morinson, Melba Liliana},
+  booktitle = {35° Simposio Internacional de Estadística (SIE 2026)},
+  year      = {2026},
+  publisher = {Universidad Nacional de Colombia},
+  url       = {}
+}
+```
+
+---
+
+## License
+
+This repository is licensed under the **MIT License** — see [LICENSE](LICENSE) for details. The PDFs in `docs/` are included for reference; check with the authors before reuse of the written content itself.
+
+---
+
+## References
+
+Key references from the paper:
+
+- World Health Organization (2025) — Mental health conditions global statistics
+- Ministerio de Salud y Protección Social, Colombia (2023, 2026) — National mental health surveys
+- DANE (2024) — Colombia vital statistics, non-fetal deaths
+- Google DeepMind (2026) — Gemma 4 technical overview
+- Rogers, C. R. (1957) — Necessary and sufficient conditions of therapeutic personality change
+- WHO, War Trauma Foundation & World Vision International (2011) — Psychological First Aid
+- Linehan, M. M. (1993) — Cognitive-behavioral treatment of borderline personality disorder
+- Miller, W. R. & Rollnick, S. (2013) — Motivational Interviewing: Helping people change
+
+---
+
+<div align="center">
+Made with ❤️ by <strong>GEMMA Research Group</strong> · Universidad de Sucre · Sincelejo, Colombia
+</div>
