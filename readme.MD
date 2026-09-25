@@ -106,7 +106,6 @@ As stated in the SIE 2026 paper's own conclusions:
 | Name | Role | Institution | Email |
 |---|---|---|---|
 | Jose Carlos Arroyo Cantero | Author | Universidad de Sucre | jose.arroyo54@unisucrevirtual.edu.co |
-| Iván Mauricio Gómez Pérez | Author | Universidad de Sucre | imauroo2023@gmail.com |
 | Lucas Mateo Rivadeneira Zarza | Author | Universidad de Sucre | lucas.rivadeneira@unisucrevirtual.edu.co |
 | Enoc David Samur Martínez | Author | Universidad de Sucre | enoc.samur@unisucrevirtual.edu.co |
 | Melba Liliana Vertel Morinson | Advisor | Universidad de Sucre | melba.vertel@unisucre.edu.co |
@@ -122,7 +121,7 @@ If you reference this work, please cite:
 ```bibtex
 @inproceedings{arroyo2026virtualassistant,
   title     = {Asistente Virtual Conversacional para el Acompañamiento Emocional Basado en Inteligencia Artificial},
-  author    = {Arroyo Cantero, Jose Carlos and Gómez Pérez, Iván Mauricio and Rivadeneira Zarza, Lucas Mateo and Samur Martínez, Enoc David and Vertel Morinson, Melba Liliana},
+  author    = {Arroyo Cantero, Jose Carlos and Rivadeneira Zarza, Lucas Mateo and Samur Martínez, Enoc David and Vertel Morinson, Melba Liliana},
   booktitle = {35° Simposio Internacional de Estadística (SIE 2026)},
   year      = {2026},
   publisher = {Universidad Nacional de Colombia},
