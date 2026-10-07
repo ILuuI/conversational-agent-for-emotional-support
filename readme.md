@@ -431,7 +431,7 @@ Planned work includes:
 | Name | Role | Institution | Email |
 |---|---|---|---|
 | Jose Carlos Arroyo Cantero | Author | Universidad de Sucre | jose.arroyo54@unisucrevirtual.edu.co |
-| Iván Mauricio Gómez Pérez | Author | Universidad de Sucre | |
+| Iván Mauricio Gómez Pérez | Author | Universidad de Sucre | imauroo2023@gmail.com |
 | Lucas Mateo Rivadeneira Zarza | Author | Universidad de Sucre | lucas.rivadeneira@unisucrevirtual.edu.co |
 | Enoc David Samur Martínez | Author | Universidad de Sucre | enoc.samur@unisucrevirtual.edu.co |
 | Melba Liliana Vertel Morinson | Advisor | Universidad de Sucre | melba.vertel@unisucre.edu.co |
